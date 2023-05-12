@@ -14,16 +14,20 @@ document.body.appendChild(renderer.domElement)
 
 const controls = new OrbitControls(camera, renderer.domElement);
 
-const geometry =  new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({color: 'green' , wireframe: true});
-const cube = new THREE.Mesh(geometry, material);
+//Creating a cube
+const cubeGeometry =  new THREE.BoxGeometry();
+const cubeMaterial = new THREE.MeshBasicMaterial({color: '#662599' , wireframe: false});
+const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
 scene.add(cube);
 
+//Creating a plane
 const planeGeometry = new THREE.PlaneGeometry(5, 5, 5);
 const planeMaterial = new THREE.MeshBasicMaterial({color: 'gray', side: THREE.DoubleSide});
 const plane = new THREE.Mesh(planeGeometry, planeMaterial);
 scene.add(plane);
-plane.rotateX( - Math.PI / 2);
+
+// Floor effect in the plane
+plane.rotateX(Math.PI / 2);
 plane.position.y = -0.55;
 
 window.addEventListener('resize', 
@@ -31,7 +35,6 @@ window.addEventListener('resize',
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix()
         renderer.setSize(window.innerWidth, window.innerHeight)
-        renderer()
     },  false
 );  
 
@@ -50,8 +53,9 @@ cameraFolder.open();
 
 function animate() {
     requestAnimationFrame(animate);
-    // cube.rotation.x += 0.0001;
-    // cube.rotation.y += 0.4;
+    // cube.rotation.x += 0.01;
+    // cube.rotation.y += 0.01;
+    // cube.rotation.z += 0.01;
     controls.update();
     render()
     stats.update();
