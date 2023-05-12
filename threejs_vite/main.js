@@ -15,7 +15,7 @@ document.body.appendChild(renderer.domElement)
 const controls = new OrbitControls(camera, renderer.domElement);
 
 const geometry =  new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({color: 0xff0184 , wireframe: false});
+const material = new THREE.MeshBasicMaterial({color: 0xff0184 , wireframe: true});
 const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
@@ -43,8 +43,8 @@ cameraFolder.open();
 
 function animate() {
     requestAnimationFrame(animate);
-    cube.rotation.x += 0.0001;
-    cube.rotation.y += 0.4;
+    // cube.rotation.x += 0.0001;
+    // cube.rotation.y += 0.4;
     controls.update();
     render()
     stats.update();
