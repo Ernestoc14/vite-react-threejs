@@ -54,12 +54,12 @@ scene.add(cube)
 const skyboxGeometry = new THREE.BoxGeometry(500, 500, 500);
 const skyboxMaterial =
 [
-    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('./Skybox/front.png'), side: THREE.DoubleSide }),
-    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load("./Skybox/back.png"), side: THREE.DoubleSide }),
-    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load("./Skybox/top.png"), side: THREE.DoubleSide }),
-    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load("./Skybox/bottom.png"), side: THREE.DoubleSide }),
-    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load("./Skybox/right.png"), side: THREE.DoubleSide }),
-    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load("./Skybox/left.png"), side: THREE.DoubleSide }),
+    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1684967584/mern/Skybox/front_ld0sro.png'), side: THREE.DoubleSide }),
+    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1684967584/mern/Skybox/back_i1goot.png'), side: THREE.DoubleSide }),
+    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1684967584/mern/Skybox/top_hlga5q.png'), side: THREE.DoubleSide }),
+    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1684967584/mern/Skybox/bottom_s0lu08.png'), side: THREE.DoubleSide }),
+    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1684967584/mern/Skybox/right_ymeixw.png'), side: THREE.DoubleSide }),
+    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1684967584/mern/Skybox/left_hbd8vp.png'), side: THREE.DoubleSide }),
 ];
 const skybox = new THREE.Mesh(skyboxGeometry, skyboxMaterial);
 scene.add(skybox);
