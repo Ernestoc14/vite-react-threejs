@@ -26,11 +26,11 @@ document.body.appendChild(renderer.domElement);
 const controls = new OrbitControls(camera, renderer.domElement);
 
 // Ambient Light
-const ambientLight = new THREE.AmbientLight(0x404040, 0.5);
+const ambientLight = new THREE.AmbientLight(0x505050, 0.5);
 scene.add(ambientLight);
 
 // Spot Light
-const spotLight = new THREE.SpotLight('purple', 1, 40, Math.PI / 8, 0.5, 1);
+const spotLight = new THREE.SpotLight('blue', 1, 40, Math.PI / 8, 0.5, 1);
 spotLight.position.set(0, 30, 13);
 // Add a Helper to see the Light Position
 const spotLightHelper = new THREE.SpotLightHelper(spotLight);
@@ -54,12 +54,12 @@ scene.add(cube)
 const skyboxGeometry = new THREE.BoxGeometry(500, 500, 500);
 const skyboxMaterial =
 [
-    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1684967584/mern/Skybox/front_ld0sro.png'), side: THREE.DoubleSide }),
-    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1684967584/mern/Skybox/back_i1goot.png'), side: THREE.DoubleSide }),
-    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1684967584/mern/Skybox/top_hlga5q.png'), side: THREE.DoubleSide }),
-    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1684967584/mern/Skybox/bottom_s0lu08.png'), side: THREE.DoubleSide }),
-    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1684967584/mern/Skybox/right_ymeixw.png'), side: THREE.DoubleSide }),
-    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1684967584/mern/Skybox/left_hbd8vp.png'), side: THREE.DoubleSide }),
+    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1685028637/mern/Skybox/front_cxpyb2.png'), side: THREE.DoubleSide }),
+    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1685028637/mern/Skybox/back_zqjskv.png'), side: THREE.DoubleSide }),
+    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1685028637/mern/Skybox/top_ypukts.png'), side: THREE.DoubleSide }),
+    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1685028637/mern/Skybox/bottom_d5ubx8.png'), side: THREE.DoubleSide }),
+    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1685028637/mern/Skybox/right_eu4dnf.png'), side: THREE.DoubleSide }),
+    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1685028637/mern/Skybox/left_ldzhrp.png'), side: THREE.DoubleSide }),
 ];
 const skybox = new THREE.Mesh(skyboxGeometry, skyboxMaterial);
 scene.add(skybox);
