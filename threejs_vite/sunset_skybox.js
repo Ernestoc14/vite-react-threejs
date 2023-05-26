@@ -52,7 +52,8 @@ cube.position.set(0, 4.5, 10);
 scene.add(cube)
 
 // Skybox
-const skybox = new RGBELoader().load('https://drive.google.com/file/d/12vD30LaByxZ_1sv4xsvo9dpb6FFUxyCX/view?usp=share_link', function (texture) {
+// blosunrise_z6urem.hdr or sunrise_zu4fai.hdr
+const skybox = new RGBELoader().load('https://res.cloudinary.com/djsqgd1lq/raw/upload/v1685080720/mern/Skybox/blosunrise_z6urem.hdr', function (texture) {
     const envMap = pmremGenerator.fromEquirectangular(texture).texture;
     scene.background = envMap;
     scene.environment = envMap;
