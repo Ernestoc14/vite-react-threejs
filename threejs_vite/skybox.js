@@ -56,7 +56,7 @@ const skyboxMaterial =
 [
     new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1685028637/mern/Skybox/front_cxpyb2.png'), side: THREE.DoubleSide }),
     new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1685028637/mern/Skybox/back_zqjskv.png'), side: THREE.DoubleSide }),
-    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1685028637/mern/Skybox/top_ypukts.png'), side: THREE.DoubleSide }),
+    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('./Skybox/topp.png'), side: THREE.DoubleSide }),
     new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1685028637/mern/Skybox/bottom_d5ubx8.png'), side: THREE.DoubleSide }),
     new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1685028637/mern/Skybox/right_eu4dnf.png'), side: THREE.DoubleSide }),
     new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('https://res.cloudinary.com/djsqgd1lq/image/upload/v1685028637/mern/Skybox/left_ldzhrp.png'), side: THREE.DoubleSide }),
