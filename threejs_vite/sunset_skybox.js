@@ -52,7 +52,7 @@ cube.position.set(0, 4.5, 10);
 scene.add(cube)
 
 // Skybox
-const skybox = new RGBELoader().load('./Skybox/sunset.hdr', function (texture) {
+const skybox = new RGBELoader().load('https://drive.google.com/file/d/12vD30LaByxZ_1sv4xsvo9dpb6FFUxyCX/view?usp=share_link', function (texture) {
     const envMap = pmremGenerator.fromEquirectangular(texture).texture;
     scene.background = envMap;
     scene.environment = envMap;
