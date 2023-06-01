@@ -1,7 +1,7 @@
 //        Project N 2
 // Background Image as a Skybox  DONE
 // Use of 2 Lights (SpotLight, AmbientLight) DONE
-// 5 Different Objects in the Scene (Search for 3D Models)
+// 8 Different Objects in the Scene (Search for 3D Models)
 // Extern Texture Objects (URL) DONE
 // Post Processing Effects (Shaders) 
 
