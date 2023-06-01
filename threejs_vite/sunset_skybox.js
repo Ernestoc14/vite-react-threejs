@@ -39,28 +39,37 @@ const spotLightHelper = new THREE.SpotLightHelper(spotLight);
 // scene.add(spotLight, spotLightHelper);
 
 // Plane 
-const planeGeometry = new THREE.PlaneGeometry(60, 60, 100);
-const planeMaterial = new THREE.MeshPhongMaterial({ color: 'pink', side: THREE.DoubleSide });
+const planeGeometry = new THREE.PlaneGeometry(320, 260, 100);
+const planeMaterial = new THREE.MeshPhongMaterial({ color: 'green', side: THREE.DoubleSide });
 const plane = new THREE.Mesh(planeGeometry, planeMaterial)
 plane.rotation.x = Math.PI / 2;
-// scene.add(plane);
-
-// Cube
-const cubeGeometry = new THREE.BoxGeometry(100, 100, 100);
-const cubeMaterial = new THREE.MeshPhongMaterial({ color: 'red' });
-const cube = new THREE.Mesh(cubeGeometry, cubeMaterial)
-cube.position.set(0, 4.5, 10);
-// scene.add(cube)
+scene.add(plane);
 
 // Loading 3D Models
-const loader = new GLTFLoader();
-loader.load('./3DModels/scene.gltf', function (gltf) {
-    const tent = gltf.scene.children[0];
-    tent.scale.set(.8,.8,.8);
-    tent.position.set(0, 4.5, 10);
-    scene.add(gltf.scene);
+// House
+const house = new GLTFLoader();
+house.load('./3D_Models/tower_house_design.glb', function (gltf) {
+    const house = gltf.scene;
+    house.position.y = 1
+    house.position.x = 130
+    house.position.z = 100
+    house.scale.set(50,60,50)
+    scene.add(house);
     animate()
 });
+
+// Tent
+const tent = new GLTFLoader();
+tent.load('./3D_Models/tent.gltf', function (gltf) {
+    const tent = gltf.scene;
+    tent.position.y = 11
+    tent.position.x = -140
+    tent.position.z = -100
+    tent.scale.set(18,18,18)
+    scene.add(tent);
+    animate()
+});
+
 
 // Skybox
 // blosunrise_z6urem.hdr or sunrise_zu4fai.hdr
