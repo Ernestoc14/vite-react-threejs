@@ -50,14 +50,14 @@ const cubeGeometry = new THREE.BoxGeometry(100, 100, 100);
 const cubeMaterial = new THREE.MeshPhongMaterial({ color: 'red' });
 const cube = new THREE.Mesh(cubeGeometry, cubeMaterial)
 cube.position.set(0, 4.5, 10);
-scene.add(cube)
+// scene.add(cube)
 
 // Loading 3D Models
 const loader = new GLTFLoader();
 loader.load('./3DModels/scene.gltf', function (gltf) {
     const tent = gltf.scene.children[0];
     tent.scale.set(.8,.8,.8);
-    tent.position.set(0, 0, 0);
+    tent.position.set(0, 4.5, 10);
     scene.add(gltf.scene);
     animate()
 });
