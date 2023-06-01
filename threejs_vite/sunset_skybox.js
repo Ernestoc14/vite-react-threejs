@@ -57,6 +57,7 @@ const loader = new GLTFLoader();
 loader.load('./3DModels/scene.gltf', function (gltf) {
     const tent = gltf.scene.children[0];
     tent.scale.set(.8,.8,.8);
+    tent.position.set(0, 0, 0);
     scene.add(gltf.scene);
     animate()
 });
