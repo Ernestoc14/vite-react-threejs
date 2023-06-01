@@ -10,6 +10,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import Stats from 'three/examples/jsm/libs/stats.module'
 import { GUI } from 'three/examples/jsm/libs/lil-gui.module.min.js';
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 
 // Creating the Scene
 const scene = new THREE.Scene();
@@ -51,6 +52,15 @@ const cube = new THREE.Mesh(cubeGeometry, cubeMaterial)
 cube.position.set(0, 4.5, 10);
 scene.add(cube)
 
+// Loading 3D Models
+const loader = new GLTFLoader();
+loader.load('./3DModels/scene.gltf', function (gltf) {
+    const tent = gltf.scene.children[0];
+    tent.scale.set(.8,.8,.8);
+    scene.add(gltf.scene);
+    animate()
+});
+
 // Skybox
 // blosunrise_z6urem.hdr or sunrise_zu4fai.hdr
 const skybox = new RGBELoader().load('https://res.cloudinary.com/djsqgd1lq/raw/upload/v1685080720/mern/Skybox/blosunrise_z6urem.hdr', function (texture) {
@@ -74,6 +84,7 @@ function onWindowResize() {
 const stats = new Stats()
 document.body.appendChild(stats.dom)
 
+// GUI Controls
 const gui = new GUI()
 const spotLightFolder = gui.addFolder('THREE.SpotLight')
 spotLightFolder.add(spotLight, 'distance', 0, 100, 0.01)
