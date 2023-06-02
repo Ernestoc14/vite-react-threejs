@@ -70,6 +70,8 @@ tent.load('./3D_Models/tent.gltf', function (gltf) {
     animate()
 });
 
+// Need to Add Other 3D Models
+
 
 // Skybox
 // blosunrise_z6urem.hdr or sunrise_zu4fai.hdr
