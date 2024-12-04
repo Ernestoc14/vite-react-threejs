@@ -58,102 +58,102 @@ plane.position.y = -1.5;
 // scene.add(plane);
 
 // Loading 3D Models
-// Map - 1
-const nuketown = new GLTFLoader();
-nuketown.load('./3D_Models/nuketown.glb', function (gltf) {
-    const nuketown = gltf.scene;
-    nuketown.scale.set(0.09, 0.09, 0.09)
-    scene.add(nuketown);
+// Calaboso - 1
+const calaboso = new GLTFLoader();
+calaboso.load('./3D_Models/bosque-semestral.v2.0.glb', function (gltf) {
+    const calaboso = gltf.scene;
+    calaboso.scale.set(9, 9, 9)
+    scene.add(calaboso);
     animate()
 });
 
-// House -2
-const house = new GLTFLoader();
-house.load('./3D_Models/tower_house_design.glb', function (gltf) {
-    const house = gltf.scene;
-    house.position.y = 1
-    house.position.x = 105
-    house.position.z = 95
-    house.scale.set(50,60,50)
-    scene.add(house);
+// Zombie -2
+const zombie = new GLTFLoader();
+zombie.load('./3D_Models/Zombie.glb', function (gltf) {
+    const zombie = gltf.scene;
+    zombie.position.y = 10
+    zombie.position.x = 10
+    zombie.position.z = 28
+    zombie.scale.set(4,5,4)
+    scene.add(zombie);
     animate()
 });
 
 // Tent - 3
-const tent = new GLTFLoader();
-tent.load('./3D_Models/tent.gltf', function (gltf) {
-    const tent = gltf.scene;
-    tent.position.y = 11
-    tent.position.x = -240
-    tent.position.z = -200
-    tent.scale.set(18,18,18)
-    scene.add(tent);
-    animate()
-});
+// const tent = new GLTFLoader();
+// tent.load('./3D_Models/tent.gltf', function (gltf) {
+//     const tent = gltf.scene;
+//     tent.position.y = 11
+//     tent.position.x = -240
+//     tent.position.z = -200
+//     tent.scale.set(18,18,18)
+//     scene.add(tent);
+//     animate()
+// });
 
 //Truck - 4
-const truck = new GLTFLoader();
-truck.load('./3D_Models/cybertruck.gltf', function (gltf) {
-    const truck = gltf.scene;
-    truck.position.y = 1
-    truck.position.x = 125
-    truck.rotateY(.29)
-    truck.position.z = -45
-    truck.scale.set(5,5,5)
-    scene.add(truck);
-    animate()
-});
+// const truck = new GLTFLoader();
+// truck.load('./3D_Models/cybertruck.gltf', function (gltf) {
+//     const truck = gltf.scene;
+//     truck.position.y = 1
+//     truck.position.x = 125
+//     truck.rotateY(.29)
+//     truck.position.z = -45
+//     truck.scale.set(5,5,5)
+//     scene.add(truck);
+//     animate()
+// });
 
 // Bus - 5
-const bus = new GLTFLoader();
-bus.load('./3D_Models/destroyed_bus_01.glb', function (gltf) {
-    const bus = gltf.scene;
-    bus.position.y = 1
-    bus.position.x = 45
-    bus.rotateY(.6)
-    bus.position.z = 10
-    bus.scale.set(5,5,5)
-    scene.add(bus);
-    animate()
-});
+// const bus = new GLTFLoader();
+// bus.load('./3D_Models/destroyed_bus_01.glb', function (gltf) {
+//     const bus = gltf.scene;
+//     bus.position.y = 1
+//     bus.position.x = 45
+//     bus.rotateY(.6)
+//     bus.position.z = 10
+//     bus.scale.set(5,5,5)
+//     scene.add(bus);
+//     animate()
+// });
 
 // Car - 6
-const car = new GLTFLoader();
-car.load('./3D_Models/cardest.glb', function (gltf) {
-    const car = gltf.scene;
-    car.position.y = 1
-    car.position.x = -140
-    car.rotateY(.6)
-    car.position.z = 50
-    car.scale.set(11,11,11)
-    scene.add(car);
-    animate()
-});
+// const car = new GLTFLoader();
+// car.load('./3D_Models/cardest.glb', function (gltf) {
+//     const car = gltf.scene;
+//     car.position.y = 1
+//     car.position.x = -140
+//     car.rotateY(.6)
+//     car.position.z = 50
+//     car.scale.set(11,11,11)
+//     scene.add(car);
+//     animate()
+// });
 
 // Truck2 - 7
-const truck2 = new GLTFLoader();
-truck2.load('./3D_Models/schoolar.glb', function (gltf) {
-    const truck2 = gltf.scene;
-    truck2.position.y = 8
-    truck2.rotateY(5.29)
-    truck2.position.x = -45
-    truck2.position.z = -4
-    truck2.scale.set(7,7,7)
-    scene.add(truck2);
-    animate()
-});
+// const truck2 = new GLTFLoader();
+// truck2.load('./3D_Models/schoolar.glb', function (gltf) {
+//     const truck2 = gltf.scene;
+//     truck2.position.y = 8
+//     truck2.rotateY(5.29)
+//     truck2.position.x = -45
+//     truck2.position.z = -4
+//     truck2.scale.set(7,7,7)
+//     scene.add(truck2);
+//     animate()
+// });
 
 // Light Post - 8
-const lightpost = new GLTFLoader();
-lightpost.load('./3D_Models/light_post.glb', function (gltf) {
-    const lightpost = gltf.scene;
-    lightpost.position.y = -2
-    lightpost.position.x = -14
-    lightpost.position.z = 50
-    lightpost.scale.set(.01,.01,.01)
-    scene.add(lightpost);
-    animate()
-});
+// const lightpost = new GLTFLoader();
+// lightpost.load('./3D_Models/light_post.glb', function (gltf) {
+//     const lightpost = gltf.scene;
+//     lightpost.position.y = -2
+//     lightpost.position.x = -14
+//     lightpost.position.z = 50
+//     lightpost.scale.set(.01,.01,.01)
+//     scene.add(lightpost);
+//     animate()
+// });
 
 // Post Processing Effects
 // const composer = new EffectComposer(renderer);
